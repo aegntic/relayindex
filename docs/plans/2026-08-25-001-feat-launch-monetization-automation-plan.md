@@ -1,7 +1,7 @@
 ---
 title: "feat: Launch monetization and marketing automation"
 type: feat
-status: active
+status: completed
 date: 2026-08-25
 deepened: 2026-08-25
 ---

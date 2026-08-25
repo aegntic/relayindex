@@ -53,6 +53,14 @@ Commercial relationships must not alter trust or evidence scores. Sponsored inve
 - Evidence freshness coverage
 - Net revenue retention by agent-call cohort
 
+## Post-deploy monitoring & validation
+
+- Check the production homepage, sample capability endpoint and agent manifest immediately after deployment and again after 24 hours.
+- Healthy signals: successful page/API responses, `sample_demo` coverage, one implemented manifest skill, exact canonical URLs, and no checkout or live-market claims.
+- Failure signals: 5xx responses, an untrusted manifest origin, missing sample labels, broken pricing anchors, or a failed recurring research run.
+- Roll back to the previous Sites version if a public contract or homepage route fails; pause the growth automation if it produces uncited output, overwrites a prior brief, or crosses the human distribution-approval gate.
+- Validation owner: Relay Index operator for the first seven days, then weekly alongside the growth review.
+
 ## Sources
 
 - RDAP lookup method: https://about.rdap.org/
