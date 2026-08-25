@@ -9,8 +9,14 @@ Relay Index is a production-shaped prototype for an agent capability intelligenc
 - Replaceable discovery, verification, observation, ranking and signal adapter contracts
 - Machine-readable `GET /api/v1/capabilities` and `GET /.well-known/agent.json`
 - Shareable capability detail records with evidence-led explanations
+- Transparent pilot pricing and a commercial model that keeps trust rankings independent from revenue
+- A recurring Codex growth engine covering daily research, twice-weekly distribution drafts and weekly monetization review
 
-All included market data is explicitly sample/demo data. No claim in the prototype should be treated as live market intelligence.
+All included market data is explicitly sample/demo data. No claim in the prototype should be treated as live market intelligence. The commercial tiers are launch hypotheses and billing is not yet enabled.
+
+## Launch domain
+
+`relayindex.ai` is the recommended primary domain. It showed no registration record in registry-level checks on 2026-08-25, but registrar checkout is the final authority and the name is not owned or bound by this repository. See `docs/strategy/launch-and-monetization.md` for alternatives and the full revenue model.
 
 ## Local development
 
