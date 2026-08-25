@@ -4,13 +4,13 @@ Created: 2026-08-25
 
 ## Domain decision
 
-Use `relayindex.ai` as the primary domain. Registry-level RDAP and WHOIS checks returned no registration record on 2026-08-25. Availability is not guaranteed until registrar checkout completes.
+Use `relayindex.dev` as the primary domain. It was registered by the operator and attached to the Sites project on 2026-08-25; DNS and certificate activation may remain pending while the new registration propagates.
 
-Defensive options, also unregistered in the same check: `relayindex.dev`, `relayindex.io`, `relayindex.network`, and `capabilityindex.ai`.
+The original `relayindex.ai` recommendation was rejected on cost. Potential future defensive options remain `relayindex.network` and `relayindex.io`, but they are not necessary for launch.
 
-Recommended purchase route: Cloudflare Registrar for at-cost registration and DNS, or Porkbun as an alternative. Porkbun listed standard `.ai` registration and renewal at USD $72.40 when checked; `.ai` registries and registrars may require a multi-year term, and a specific name may carry premium pricing. Checkout is the authority.
+Cloudflare Registrar was selected for at-cost registration and DNS. The standard `.dev` rate was approximately USD $12.20 for both registration and annual renewal when checked; checkout remains the authority for the purchased name.
 
-After purchase, bind the domain to the existing private Sites project, make it the canonical origin for manifests and metadata, then register the defensive names only if the brand is being publicly launched.
+The domain is bound to the existing private Sites project and recognized as a canonical origin for manifests and metadata. Keep the existing Sites URL as a fallback until DNS validation and TLS issuance are active.
 
 ## Revenue architecture
 
@@ -38,7 +38,7 @@ Commercial relationships must not alter trust or evidence scores. Sponsored inve
 
 ## Launch sequence
 
-1. Register `relayindex.ai` and establish the legal/billing entity.
+1. Activate DNS and TLS for `relayindex.dev`, then establish the legal/billing entity.
 2. Recruit five design partners with consequential multi-provider routing needs.
 3. Measure time saved, avoided failure cost and API decision quality before changing pilot prices.
 4. Add self-serve checkout only when entitlement, metering, tax and refund policies are operational.

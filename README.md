@@ -16,7 +16,7 @@ All included market data is explicitly sample/demo data. No claim in the prototy
 
 ## Launch domain
 
-`relayindex.ai` is the recommended primary domain. It showed no registration record in registry-level checks on 2026-08-25, but registrar checkout is the final authority and the name is not owned or bound by this repository. See `docs/strategy/launch-and-monetization.md` for alternatives and the full revenue model.
+`relayindex.dev` is the owned primary domain and is attached to the Sites project. DNS validation may remain pending immediately after registration. See `docs/strategy/launch-and-monetization.md` for the domain decision and full revenue model.
 
 ## Local development
 
