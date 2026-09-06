@@ -1,0 +1,48 @@
+{
+  "workflow": "knowledge-engine",
+  "subject": "relayindex.dev",
+  "stage": "01_atomic_claim_extraction_and_direct_sourcing",
+  "claims": [
+    {
+      "id": "CLAIM-01",
+      "statement": "The official MCP Registry provides no uptime, availability, or durability SLAs and advises aggregators to persist catalog data locally.",
+      "epistemic_strength": "EMPIRICAL_DOCUMENTATION",
+      "primary_source": {
+        "uri": "https://github.com/modelcontextprotocol/registry/blob/main/docs/modelcontextprotocol-io/registry-aggregators.mdx",
+        "source_type": "official_documentation",
+        "retrieved_at": "2026-09-04T22:03:00Z"
+      }
+    },
+    {
+      "id": "CLAIM-02",
+      "statement": "The official Registry API's `updated_since` query filter is the only endpoint mechanism that returns tombstone records for deleted servers.",
+      "epistemic_strength": "EMPIRICAL_DOCUMENTATION",
+      "primary_source": {
+        "uri": "https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/api/official-registry-api.md",
+        "source_type": "api_specification",
+        "retrieved_at": "2026-09-04T22:03:00Z"
+      }
+    },
+    {
+      "id": "CLAIM-03",
+      "statement": "In a bounded delta of 657 latest-version records, 163 lacked repository metadata, 8 were deleted, 3 were deprecated, and 3 active records declared neither packages nor remotes.",
+      "epistemic_strength": "MEASURED_OBSERVATION",
+      "primary_source": {
+        "uri": "https://registry.modelcontextprotocol.io/v0.1/servers?updated_since=2026-09-03T22:01:30Z",
+        "source_type": "api_telemetry_receipt",
+        "manifest_sha256": "4b7d7ac4885998f629d7b5d17c77f8321158a819844b261a7d548110593481fa",
+        "retrieved_at": "2026-09-04T22:05:00Z"
+      }
+    },
+    {
+      "id": "CLAIM-04",
+      "statement": "506 distinct namespaces comprise the 657 records, with the single largest namespace contributing 7.15% (47 records), demonstrating namespace concentration rather than spam.",
+      "epistemic_strength": "MEASURED_OBSERVATION",
+      "primary_source": {
+        "uri": "https://registry.modelcontextprotocol.io/v0.1/servers",
+        "source_type": "statistical_analysis",
+        "retrieved_at": "2026-09-04T22:05:00Z"
+      }
+    }
+  ]
+}

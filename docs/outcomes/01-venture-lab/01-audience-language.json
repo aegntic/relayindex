@@ -1,0 +1,42 @@
+{
+  "workflow": "venture-lab",
+  "subject": "relayindex.dev",
+  "stage": "01_audience_and_language_mining",
+  "timestamp": "2026-09-06T07:32:00Z",
+  "audience_segments": [
+    {
+      "segment": "Autonomous Agent Developers & Multi-Agent Framework Engineers",
+      "icp": "Engineers building LangChain, Antigravity, OpenClaw, Hermes, or Claude Code agents requiring dynamic MCP tool discovery.",
+      "pain_vocabulary": [
+        "phantom tools: tools listed in registry that fail immediately upon connection",
+        "stale capability drift: server was updated or removed upstream without notice",
+        "registry downtime blindspot: reliance on central registry without local/edge delta ledger",
+        "unverified remotes: HTTP/SSE remotes declared without verified TLS or uptime SLA"
+      ],
+      "current_workarounds": [
+        "Hardcoding tool lists into agent system prompts",
+        "Periodic ad-hoc cron jobs running registry scrapes",
+        "Try-catch fallbacks at runtime that waste 15-30s of inference latency on broken tools"
+      ],
+      "substitute_failure_modes": {
+        "direct_registry_scraping": "Official registry provides no uptime guarantee, status changes (tombstones) are omitted from naive queries, and updates lack execution proofs.",
+        "manual_readme_curation": "Doesn't scale across 650+ MCP servers and 500+ namespaces updating hourly."
+      }
+    },
+    {
+      "segment": "Enterprise AI Security & Infrastructure Architects",
+      "icp": "Platform leads managing data security, compliance, and outbound network access for corporate AI agents.",
+      "pain_vocabulary": [
+        "namespace impersonation: publisher names mimicking official brands",
+        "provenance opacity: unknown source repo or unsigned binary distribution",
+        "privilege escalation via uninspected MCP server updates"
+      ],
+      "current_workarounds": [
+        "Strict static IP/domain whitelists, prohibiting dynamic agent MCP discovery entirely."
+      ],
+      "substitute_failure_modes": {
+        "static_whitelisting": "Stifles agent productivity and breaks whenever cloud server IP pools rotate."
+      }
+    }
+  ]
+}

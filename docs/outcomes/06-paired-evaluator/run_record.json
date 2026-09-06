@@ -1,0 +1,22 @@
+{
+  "workflow": "paired-results-evaluator",
+  "tool_index": 6,
+  "subject": "relayindex.dev",
+  "completed_at": "2026-09-06T07:32:55Z",
+  "transport": [
+    "stdio_json_rpc_mcp",
+    "cli_binary_runner"
+  ],
+  "evaluated_pairs": 10,
+  "candidate_wins": 10,
+  "baseline_wins": 0,
+  "ties": 0,
+  "mean_baseline": 0.2,
+  "mean_candidate": 1.0,
+  "practical_gain": 0.8,
+  "sign_test_p_value": 0.00098,
+  "alpha_0_05_significant": true,
+  "violations": 0,
+  "critical_failures": [],
+  "verdict": "PROMOTE"
+}

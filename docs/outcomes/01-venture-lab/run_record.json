@@ -1,0 +1,21 @@
+{
+  "workflow": "venture-lab",
+  "subject": "relayindex.dev",
+  "completed_at": "2026-09-06T07:32:05Z",
+  "duration_seconds": 3.8,
+  "stages_completed": [
+    "01_audience_and_language_mining",
+    "02_offer_component_synthesis",
+    "03_falsification_and_experiment_design",
+    "04_exit_artifacts_and_evidence_audit"
+  ],
+  "artifacts_generated": [
+    "01-audience-language.json",
+    "02-offer-spec.md",
+    "03-experiment-plan.json",
+    "tested-offer.md",
+    "evidence-gap-audit.json",
+    "run_record.json"
+  ],
+  "outcome_verdict": "OFFER_FORMULATED_AND_AUDITED"
+}

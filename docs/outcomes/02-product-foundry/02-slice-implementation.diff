@@ -1,0 +1,75 @@
+--- a/src/lib/delta-ledger.ts
++++ b/src/lib/delta-ledger.ts
+@@ -0,0 +1,84 @@
++import crypto from 'node:crypto';
++
++export interface RegistryRecord {
++  id: string;
++  namespace: string;
++  name: string;
++  version: string;
++  status: 'active' | 'deprecated' | 'deleted';
++  repository?: string;
++  packages?: string[];
++  remotes?: string[];
++  updated_at: string;
++}
++
++export interface LedgerEntry {
++  id: string;
++  namespace: string;
++  name: string;
++  version: string;
++  status: 'active' | 'deprecated' | 'deleted';
++  executability_state: 'catalogued' | 'route_declared' | 'route_resolved' | 'handshake_verified' | 'capability_observed';
++  tombstone: boolean;
++  record_sha256: string;
++  synced_at: string;
++}
++
++export function evaluateExecutability(record: RegistryRecord): LedgerEntry['executability_state'] {
++  if (record.status === 'deleted' || record.status === 'deprecated') {
++    return 'catalogued';
++  }
++  const hasRoute = (record.packages && record.packages.length > 0) || (record.remotes && record.remotes.length > 0);
++  if (!hasRoute) {
++    return 'catalogued';
++  }
++  if (record.repository && record.repository.startsWith('https://github.com')) {
++    return 'route_resolved';
++  }
++  return 'route_declared';
++}
++
++export function processRegistryDelta(records: RegistryRecord[]): LedgerEntry[] {
++  return records.map(record => {
++    const tombstone = record.status === 'deleted';
++    const executability_state = evaluateExecutability(record);
++    const hash = crypto.createHash('sha256').update(JSON.stringify(record)).digest('hex');
++    
++    return {
++      id: record.id,
++      namespace: record.namespace,
++      name: record.name,
++      version: record.version,
++      status: record.status,
++      executability_state,
++      tombstone,
++      record_sha256: hash,
++      synced_at: new Date().toISOString()
++    };
++  });
++}
++
++export function filterDeltaByCursor(ledger: LedgerEntry[], cursor?: string, limit = 50): { records: LedgerEntry[], nextCursor: string | null } {
++  let startIdx = 0;
++  if (cursor) {
++    const found = ledger.findIndex(e => e.id === cursor);
++    if (found !== -1) {
++      startIdx = found + 1;
++    }
++  }
++  const slice = ledger.slice(startIdx, startIdx + limit);
++  const nextCursor = (startIdx + limit < ledger.length) ? slice[slice.length - 1].id : null;
++  return { records: slice, nextCursor };
++}

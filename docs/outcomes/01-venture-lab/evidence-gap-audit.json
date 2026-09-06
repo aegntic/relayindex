@@ -1,0 +1,33 @@
+{
+  "workflow": "venture-lab",
+  "subject": "relayindex.dev",
+  "stage": "04_evidence_gap_audit",
+  "status": "VALIDATED_WITH_GAPS",
+  "verified_claims": [
+    {
+      "claim": "Official MCP registry provides no uptime or durability SLAs.",
+      "evidence": "Official registry aggregator docs (modelcontextprotocol-io/registry-aggregators.mdx).",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "163 of 657 delta records lack repository metadata; 3 lack packages and remotes.",
+      "evidence": "Empirical capture of 657 latest-version records (manifest SHA 4b7d7ac...).",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "Tombstones (deletions) require updated_since filter and cannot be caught by static scrapes.",
+      "evidence": "Official Registry API schema and live listing inspection.",
+      "status": "VERIFIED"
+    }
+  ],
+  "unverified_assumptions_and_gaps": [
+    {
+      "gap": "Enterprise willingness to pay for high-availability MCP routing proxy ($49/mo).",
+      "mitigation": "Run 7-day validation experiment using live sign-up waitlist with pricing test."
+    },
+    {
+      "gap": "Latency overhead introduced by intermediate gateway lookup vs direct invocation.",
+      "mitigation": "Edge KV caching with sub-5ms lookup latency."
+    }
+  ]
+}

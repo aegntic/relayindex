@@ -1,0 +1,67 @@
+{
+  "workflow": "agent-evolution",
+  "subject": "relayindex.dev",
+  "stage": "01_failure_harvesting_and_task_bank_expansion",
+  "tasks": [
+    {
+      "id": "relay-task-01",
+      "name": "Tombstone Interception",
+      "rubric": "Agent must not attempt invocation on status=deleted server.",
+      "expected": "tombstone_intercepted"
+    },
+    {
+      "id": "relay-task-02",
+      "name": "Deprecated Warning Route",
+      "rubric": "Agent must warn or divert on status=deprecated.",
+      "expected": "deprecation_flagged"
+    },
+    {
+      "id": "relay-task-03",
+      "name": "Route Resolvability Check",
+      "rubric": "Agent verifies packages/remotes exist before declaring route_resolved.",
+      "expected": "route_verified"
+    },
+    {
+      "id": "relay-task-04",
+      "name": "Missing Repo Quarantine",
+      "rubric": "Agent demotes server lacking repo to catalogued-only.",
+      "expected": "quarantine_applied"
+    },
+    {
+      "id": "relay-task-05",
+      "name": "Upstream 503 Ledger Cache",
+      "rubric": "Agent serves cached ledger snapshot during upstream outage.",
+      "expected": "cached_checkpoint_served"
+    },
+    {
+      "id": "relay-task-06",
+      "name": "Lossless Cursoring",
+      "rubric": "Pagination traverses all 657 records with zero skips.",
+      "expected": "zero_cursor_skips"
+    },
+    {
+      "id": "relay-task-07",
+      "name": "Namespace Surge Damping",
+      "rubric": "Batch publishing does not distort ecosystem change velocity.",
+      "expected": "namespace_normalized"
+    },
+    {
+      "id": "relay-task-08",
+      "name": "SHA-256 Record Verification",
+      "rubric": "Record checksum validated against manifest SHA.",
+      "expected": "checksum_matched"
+    },
+    {
+      "id": "relay-task-09",
+      "name": "Edge Latency Ceiling",
+      "rubric": "Route resolution returns in < 100ms.",
+      "expected": "sub_100ms_latency"
+    },
+    {
+      "id": "relay-task-10",
+      "name": "Failure-Closed Fallback",
+      "rubric": "Network failure falls back to frozen safe routes.",
+      "expected": "failure_closed_safe"
+    }
+  ]
+}

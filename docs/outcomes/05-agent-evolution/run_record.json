@@ -1,0 +1,21 @@
+{
+  "workflow": "agent-evolution",
+  "subject": "relayindex.dev",
+  "completed_at": "2026-09-06T07:32:45Z",
+  "duration_seconds": 3.1,
+  "stages_completed": [
+    "01_failure_harvesting_and_task_bank_expansion",
+    "02_intervention_hypothesis_and_candidate_fork",
+    "03_paired_multi_trial_evaluation_and_sign_testing",
+    "04_reversible_promotion_gate_and_artifact_deposit"
+  ],
+  "artifacts_generated": [
+    "01-harvested-tasks.json",
+    "02-intervention-spec.md",
+    "03-paired-evaluation-report.json",
+    "promotion-decision.md",
+    "rollback-recipe.sh",
+    "run_record.json"
+  ],
+  "verdict": "PROMOTE"
+}

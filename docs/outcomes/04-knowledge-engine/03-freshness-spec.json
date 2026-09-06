@@ -1,0 +1,24 @@
+{
+  "workflow": "knowledge-engine",
+  "subject": "relayindex.dev",
+  "stage": "03_freshness_rules_and_invalidation_triggers",
+  "half_life_rules": {
+    "api_delta_telemetry": {
+      "half_life_hours": 24,
+      "revalidate_by": "2026-09-07T00:00:00Z"
+    },
+    "documentation_semantics": {
+      "half_life_days": 30,
+      "revalidate_by": "2026-10-04T00:00:00Z"
+    },
+    "namespace_concentration": {
+      "half_life_days": 7,
+      "revalidate_by": "2026-09-13T00:00:00Z"
+    }
+  },
+  "invalidation_triggers": [
+    "Upstream Registry introduces breaking API v0.2 changes removing updated_since filter",
+    "Upstream Registry implements native cryptographically signed server health attestations"
+  ],
+  "automated_watch_action": "Hourly poll against registry.modelcontextprotocol.io/v0.1/servers?limit=1 with conditional ETag check"
+}

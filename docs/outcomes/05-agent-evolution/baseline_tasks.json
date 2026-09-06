@@ -1,0 +1,52 @@
+[
+  {
+    "id": "relay-task-01",
+    "score": 0.0,
+    "evidence": "Baseline crashed attempting to connect to deleted MCP server (tombstone missed)."
+  },
+  {
+    "id": "relay-task-02",
+    "score": 0.0,
+    "evidence": "Baseline routed to deprecated server without warning."
+  },
+  {
+    "id": "relay-task-03",
+    "score": 0.5,
+    "evidence": "Baseline resolved route but failed on missing remote URL."
+  },
+  {
+    "id": "relay-task-04",
+    "score": 0.0,
+    "evidence": "Baseline attempted git clone on empty repository field."
+  },
+  {
+    "id": "relay-task-05",
+    "score": 0.0,
+    "evidence": "Baseline threw 503 unhandled exception during upstream outage."
+  },
+  {
+    "id": "relay-task-06",
+    "score": 0.7,
+    "evidence": "Baseline skipped 8 records across paginated cursor boundaries."
+  },
+  {
+    "id": "relay-task-07",
+    "score": 0.0,
+    "evidence": "Baseline ranked batch publisher as 85% category growth."
+  },
+  {
+    "id": "relay-task-08",
+    "score": 0.0,
+    "evidence": "Baseline performed no cryptographic checksum verification."
+  },
+  {
+    "id": "relay-task-09",
+    "score": 0.8,
+    "evidence": "Direct scraping latency 140ms."
+  },
+  {
+    "id": "relay-task-10",
+    "score": 0.0,
+    "evidence": "Baseline failed open, attempting connection during DNS failure."
+  }
+]

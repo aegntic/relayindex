@@ -1,0 +1,54 @@
+/* RelayIndex Interaction Specifications & Motion Choreography */
+:root {
+  --bg-root: #08090d;
+  --surface-elevated: #171a24;
+  --border-subtle: #232838;
+  --emerald-radar: #00f59b;
+  --cyan-route: #00d2ff;
+  --text-primary: #f3f4f8;
+}
+
+/* Radar Sweep Keyframe */
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { transform: rotate(360deg); opacity: 0.8; }
+}
+
+/* Orchestrated Staggered Entrance */
+.orchestrated-hero {
+  animation: fadeIn 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.orchestrated-telemetry {
+  animation: fadeInUp 400ms cubic-bezier(0.16, 1, 0.3, 1) 200ms forwards;
+  opacity: 0;
+}
+.orchestrated-ledger {
+  animation: fadeInUp 400ms cubic-bezier(0.16, 1, 0.3, 1) 400ms forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Micro-Interactions: Ledger Card Hover Glow */
+.ledger-row {
+  transition: background-color 150ms ease, border-color 150ms ease;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--surface-elevated);
+}
+.ledger-row:hover {
+  border-color: rgba(0, 245, 155, 0.4);
+  box-shadow: 0 0 12px rgba(0, 245, 155, 0.08);
+}
+
+/* Reduced Motion Dampening */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

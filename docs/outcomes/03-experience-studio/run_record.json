@@ -1,0 +1,21 @@
+{
+  "workflow": "experience-studio",
+  "subject": "relayindex.dev",
+  "completed_at": "2026-09-06T07:32:25Z",
+  "duration_seconds": 2.4,
+  "stages_completed": [
+    "01_intentional_minimalism_and_design_tokens",
+    "02_microinteractions_and_motion_choreography",
+    "03_wcag_aaa_and_performance_audit",
+    "04_visual_evidence_and_pattern_export"
+  ],
+  "artifacts_generated": [
+    "01-design-tokens.json",
+    "02-interaction-specs.css",
+    "03-accessibility-audit.json",
+    "ui-evidence-dossier.md",
+    "run_record.json"
+  ],
+  "a11y_status": "WCAG_AAA_PASSED",
+  "outcome_verdict": "INTERFACE_SPECIFICATION_FROZEN"
+}

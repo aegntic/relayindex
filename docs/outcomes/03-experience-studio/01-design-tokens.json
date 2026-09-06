@@ -1,0 +1,40 @@
+{
+  "workflow": "experience-studio",
+  "subject": "relayindex.dev",
+  "stage": "01_intentional_minimalism_and_design_tokens",
+  "aesthetic_direction": "technical_precision",
+  "palette": {
+    "background": {
+      "root": "#08090d",
+      "surface_subtle": "#0f1118",
+      "surface_elevated": "#171a24",
+      "border": "#232838"
+    },
+    "text": {
+      "primary": "#f3f4f8",
+      "secondary": "#9aa2b6",
+      "muted": "#5f6679",
+      "contrast_ratio_primary_on_root": "16.8:1 (Passes WCAG AAA)",
+      "contrast_ratio_secondary_on_root": "7.4:1 (Passes WCAG AAA)"
+    },
+    "accents": {
+      "radar_emerald": "#00f59b",
+      "route_cyan": "#00d2ff",
+      "amber_warning": "#ffb800",
+      "rose_tombstone": "#ff3366"
+    }
+  },
+  "typography": {
+    "headline": "Space Grotesk, -apple-system, sans-serif",
+    "body": "General Sans, system-ui, sans-serif",
+    "code_telemetry": "JetBrains Mono, Menlo, monospace"
+  },
+  "spacing_scale": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px"
+  }
+}

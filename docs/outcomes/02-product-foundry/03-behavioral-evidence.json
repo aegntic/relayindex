@@ -1,0 +1,16 @@
+{
+  "workflow": "product-foundry",
+  "subject": "relayindex.dev",
+  "stage": "03_behavioral_and_failure_verification",
+  "test_suite_path": "/home/ae/Documents/Codex/2026-08-25/referenced-chatgpt-conversation-this-is-an/outputs/relayindex-outcomes/02-product-foundry/regression-suite.test.mjs",
+  "tests_executed": 3,
+  "tests_passed": 3,
+  "tests_failed": 0,
+  "exit_code": 0,
+  "test_output": "\u2714 Delta Engine - Evaluates active server with packages and repo to route_resolved (15.975582ms)\n\u2714 Delta Engine - Correctly sets tombstone and catalogued state on deleted server (0.169456ms)\n\u2714 Delta Engine - Cursoring partitions records across pages without loss (0.200327ms)\n\u2139 tests 3\n\u2139 suites 0\n\u2139 pass 3\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 55.78816\n",
+  "failure_injection_results": {
+    "tombstone_detection": "PASS (deleted status triggers tombstone=true)",
+    "route_resolution": "PASS (github URL + packages triggers route_resolved)",
+    "cursor_boundary_partition": "PASS (0 items lost across 3 paginated windows)"
+  }
+}

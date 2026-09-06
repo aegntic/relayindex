@@ -1,0 +1,72 @@
+[
+  {
+    "id": "relay-task-01",
+    "score": 1.0,
+    "evidence": "RelayIndex intercepted tombstone and aborted connection.",
+    "latency_ms": 32,
+    "tokens": 65
+  },
+  {
+    "id": "relay-task-02",
+    "score": 1.0,
+    "evidence": "RelayIndex flagged deprecated state and routed to active alternative.",
+    "latency_ms": 41,
+    "tokens": 72
+  },
+  {
+    "id": "relay-task-03",
+    "score": 1.0,
+    "evidence": "RelayIndex verified packages before declaring route_resolved.",
+    "latency_ms": 35,
+    "tokens": 60
+  },
+  {
+    "id": "relay-task-04",
+    "score": 1.0,
+    "evidence": "RelayIndex quarantined server to catalogued-only status.",
+    "latency_ms": 28,
+    "tokens": 58
+  },
+  {
+    "id": "relay-task-05",
+    "score": 1.0,
+    "evidence": "RelayIndex served local cached ledger snapshot during 503.",
+    "latency_ms": 15,
+    "tokens": 45
+  },
+  {
+    "id": "relay-task-06",
+    "score": 1.0,
+    "evidence": "RelayIndex cursoring traversed all 657 records with 0 skips.",
+    "latency_ms": 48,
+    "tokens": 80
+  },
+  {
+    "id": "relay-task-07",
+    "score": 1.0,
+    "evidence": "RelayIndex normalized namespace volume, filtering batch noise.",
+    "latency_ms": 39,
+    "tokens": 70
+  },
+  {
+    "id": "relay-task-08",
+    "score": 1.0,
+    "evidence": "RelayIndex validated SHA-256 against manifest checksum.",
+    "latency_ms": 22,
+    "tokens": 50
+  },
+  {
+    "id": "relay-task-09",
+    "score": 1.0,
+    "evidence": "Edge KV cache returned route in 24ms (< 100ms ceiling).",
+    "latency_ms": 24,
+    "tokens": 42
+  },
+  {
+    "id": "relay-task-10",
+    "score": 1.0,
+    "evidence": "RelayIndex cleanly fell back to frozen route state upon failure.",
+    "latency_ms": 19,
+    "tokens": 48
+  }
+]

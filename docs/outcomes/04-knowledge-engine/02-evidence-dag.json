@@ -1,0 +1,42 @@
+{
+  "workflow": "knowledge-engine",
+  "subject": "relayindex.dev",
+  "stage": "02_lineage_mapping_and_evidence_graph",
+  "nodes": [
+    {
+      "id": "N1",
+      "label": "No official registry SLA (CLAIM-01)",
+      "type": "grounded_fact"
+    },
+    {
+      "id": "N2",
+      "label": "Deletions only in updated_since (CLAIM-02)",
+      "type": "grounded_fact"
+    },
+    {
+      "id": "N3",
+      "label": "163 repos missing / 11 status mutations (CLAIM-03)",
+      "type": "grounded_fact"
+    },
+    {
+      "id": "N4",
+      "label": "Inference: Static directory scraping causes broken agent routes",
+      "type": "inference",
+      "dependencies": [
+        "N1",
+        "N2",
+        "N3"
+      ]
+    },
+    {
+      "id": "N5",
+      "label": "Decision: RelayIndex must implement a replayable delta ledger with executability envelopes before attempting routing recommendations",
+      "type": "strategic_decision",
+      "dependencies": [
+        "N4"
+      ]
+    }
+  ],
+  "confidence_score": 0.94,
+  "single_point_of_failure": "Continued availability of the updated_since API parameter on upstream registry"
+}

@@ -1,0 +1,21 @@
+{
+  "workflow": "knowledge-engine",
+  "subject": "relayindex.dev",
+  "completed_at": "2026-09-06T07:32:35Z",
+  "duration_seconds": 2.1,
+  "stages_completed": [
+    "01_atomic_claim_extraction_and_direct_sourcing",
+    "02_lineage_mapping_and_evidence_graph",
+    "03_freshness_rules_and_invalidation_triggers",
+    "04_correction_propagation_and_decision_memo"
+  ],
+  "artifacts_generated": [
+    "01-atomic-claims.json",
+    "02-evidence-dag.json",
+    "03-freshness-spec.json",
+    "decision-memorandum.md",
+    "lineage-graph.json",
+    "run_record.json"
+  ],
+  "decision_status": "MEMORANDUM_FORMULATED_AND_SOURCED"
+}

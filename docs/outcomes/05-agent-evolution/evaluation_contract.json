@@ -1,0 +1,17 @@
+{
+  "required_tasks": [
+    "relay-task-01",
+    "relay-task-02",
+    "relay-task-03",
+    "relay-task-04",
+    "relay-task-05",
+    "relay-task-06",
+    "relay-task-07",
+    "relay-task-08",
+    "relay-task-09",
+    "relay-task-10"
+  ],
+  "max_latency_ms": 100,
+  "max_tokens": 150,
+  "practical_threshold": 0.1
+}

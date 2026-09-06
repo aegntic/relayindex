@@ -1,0 +1,103 @@
+{
+  "status": "VALID",
+  "verdict": "PROMOTE",
+  "pairs_evaluated": 10,
+  "candidate_wins": 10,
+  "baseline_wins": 0,
+  "ties": 0,
+  "mean_baseline_score": 0.2,
+  "mean_candidate_score": 1.0,
+  "practical_gain": 0.8,
+  "practical_threshold": 0.1,
+  "sign_test": {
+    "effective_pairs": 10,
+    "candidate_favorable_pairs": 10,
+    "one_sided_p_value": 0.00098,
+    "alpha_0_05": true
+  },
+  "evidence_missing_count": 0,
+  "resource_ceiling_violations": 0,
+  "critical_failures": [],
+  "task_details": [
+    {
+      "id": "relay-task-01",
+      "baseline_score": 0,
+      "candidate_score": 1,
+      "diff": 1.0,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-02",
+      "baseline_score": 0,
+      "candidate_score": 1,
+      "diff": 1.0,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-03",
+      "baseline_score": 0.5,
+      "candidate_score": 1,
+      "diff": 0.5,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-04",
+      "baseline_score": 0,
+      "candidate_score": 1,
+      "diff": 1.0,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-05",
+      "baseline_score": 0,
+      "candidate_score": 1,
+      "diff": 1.0,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-06",
+      "baseline_score": 0.7,
+      "candidate_score": 1,
+      "diff": 0.30000000000000004,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-07",
+      "baseline_score": 0,
+      "candidate_score": 1,
+      "diff": 1.0,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-08",
+      "baseline_score": 0,
+      "candidate_score": 1,
+      "diff": 1.0,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-09",
+      "baseline_score": 0.8,
+      "candidate_score": 1,
+      "diff": 0.19999999999999996,
+      "evidence_provided": true,
+      "resource_valid": true
+    },
+    {
+      "id": "relay-task-10",
+      "baseline_score": 0,
+      "candidate_score": 1,
+      "diff": 1.0,
+      "evidence_provided": true,
+      "resource_valid": true
+    }
+  ]
+}

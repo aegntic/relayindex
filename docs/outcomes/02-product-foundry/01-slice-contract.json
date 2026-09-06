@@ -1,0 +1,53 @@
+{
+  "workflow": "product-foundry",
+  "subject": "relayindex.dev",
+  "stage": "01_vertical_slice_boundary_definition",
+  "slice_name": "relay-delta-engine",
+  "objective": "Build and verify the status-aware registry delta ledger and executability envelope evaluator for relayindex.dev",
+  "input_contract": {
+    "endpoint": "/api/v1/ledger/delta",
+    "method": "GET",
+    "parameters": {
+      "updated_since": {
+        "type": "string",
+        "format": "date-time",
+        "required": false
+      },
+      "limit": {
+        "type": "integer",
+        "min": 1,
+        "max": 100,
+        "default": 50
+      },
+      "cursor": {
+        "type": "string",
+        "required": false
+      }
+    }
+  },
+  "output_contract": {
+    "status": 200,
+    "schema": {
+      "cursor": "string | null",
+      "has_more": "boolean",
+      "synced_at": "string (ISO8601)",
+      "records": [
+        {
+          "id": "string",
+          "namespace": "string",
+          "name": "string",
+          "version": "string",
+          "status": "active | deprecated | deleted",
+          "executability_state": "catalogued | route_declared | route_resolved | handshake_verified | capability_observed",
+          "tombstone": "boolean",
+          "record_sha256": "string"
+        }
+      ]
+    }
+  },
+  "failure_modes": [
+    "upstream_503_rate_limit: Return cached ledger checkpoint with degraded flag",
+    "malformed_schema_payload: Quarantine record and preserve ingestion pipeline continuity",
+    "missing_route_metadata: Transition state to 'catalogued' without failing ingestion"
+  ]
+}

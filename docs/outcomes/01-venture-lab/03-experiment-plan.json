@@ -1,0 +1,24 @@
+{
+  "workflow": "venture-lab",
+  "subject": "relayindex.dev",
+  "stage": "03_falsification_and_experiment_design",
+  "hypothesis": {
+    "null_hypothesis": "Agents utilizing RelayIndex live status envelopes achieve no statistically significant reduction in runtime tool-call errors or latency over naive official registry scrapers.",
+    "alternative_hypothesis": "Agents routing through RelayIndex experience >= 40% fewer runtime connection failures and avoid 100% of tombstoned/deprecated servers.",
+    "mde": 0.35,
+    "sample_size_n": 200,
+    "trial_duration_days": 7
+  },
+  "disconfirming_evidence_rules": [
+    "If official MCP registry implements native push notifications, edge caching, and cryptographic verification with 99.99% uptime, eliminating the need for an external delta ledger.",
+    "If multi-agent harnesses overwhelmingly adopt static tool bundles rather than dynamic runtime discovery."
+  ],
+  "trial_parameters": {
+    "test_groups": [
+      "Control (Raw Registry API)",
+      "Treatment (RelayIndex Delta Ledger + Executability Envelope)"
+    ],
+    "metric_primary": "Tool invocation success rate on newly published or updated MCP servers",
+    "metric_secondary": "Discovery-to-handshake latency (ms)"
+  }
+}
