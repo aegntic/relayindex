@@ -7,20 +7,30 @@ Relay Index is a production-shaped prototype for an agent capability intelligenc
 - Responsive product surface with capability graph, change radar, opportunity ledger, trust engine, watches and agent API examples
 - Typed schemas for `Capability`, `Provider`, `Evidence`, `ChangeEvent`, `Observation`, `Opportunity` and `Watch`
 - Replaceable discovery, verification, observation, ranking and signal adapter contracts
-- Machine-readable `GET /api/v1/capabilities` and `GET /.well-known/agent.json`
+- Machine-readable `GET /api/v1/capabilities`, `GET /api/v1/offers/capability-assurance`, and legacy `GET /.well-known/agent.json`
 - Shareable capability detail records with evidence-led explanations
-- Transparent pilot pricing and a commercial model that keeps trust rankings independent from revenue
-- A recurring Codex growth engine covering daily research, twice-weekly distribution drafts and weekly monetization review
+- A paid MCP connection decision sprint with an explicit evidence protocol, founding A$1,250 price test, and fail-closed Stripe checkout configuration
+- Versioned policy and templates for an externally scheduled Codex growth engine covering daily change/gap research, gated distribution drafts, and weekly monetization review
 
-All included market data is explicitly sample/demo data. No claim in the prototype should be treated as live market intelligence. The commercial tiers are launch hypotheses and billing is not yet enabled.
+All included capability-market data is explicitly sample/demo data. No graph claim in the prototype should be treated as live market intelligence. Generic SaaS tiers and quota guesses remain withdrawn. The manual sprint is a separate paid founding offer; billing and enrolment open only when a valid Stripe Payment Link is configured. Agent invocation remains disabled.
+
+The public sprint endpoint is a read-only offer description, not an A2A invocation surface. `/.well-known/agent.json` is retained as legacy Relay Index product-discovery metadata and is not a current A2A Agent Card.
 
 ## Launch domain
 
-`relayindex.dev` is the owned primary domain and is attached to the Sites project. DNS validation may remain pending immediately after registration. See `docs/strategy/launch-and-monetization.md` for the domain decision and full revenue model.
+`relayindex.dev` is the owned primary domain. As checked on 2026-08-30, public DNS still resolves to Porkbun parking addresses and HTTPS does not complete, so the domain is not live on the Sites project. The fallback Sites URL also requires authentication. Make the project public, copy the exact custom-domain DNS target from Sites into the authoritative Porkbun DNS zone, and verify TLS before sending traffic. See `docs/strategy/launch-and-monetization.md` for the full revenue model.
+
+## Evidence-led market development
+
+`docs/strategy/market-gap-method.md` defines the initial wedge: independent, task-specific decision assurance for an operator choosing among external agent capabilities. The current paid surface narrows that wedge to the decision between MCP registry discovery and connection approval. The private organization research queue stays outside the deployed app and treats ecosystem activity as evidence, not buyer intent. Marketing, revenue, sponsorship, and organization priority never enter trust scoring.
+
+The recurring automation itself lives in the Codex app rather than this repository. `docs/marketing/` is its versioned policy surface. Every output is private and draft-only; the automation cannot publish, contact anyone, or approve its own distribution.
 
 ## Local development
 
 Requires Node.js 22. Copy `.env.example` to `.env.local`, then install dependencies and run the development script.
+
+To open checkout, create a one-time Stripe Payment Link for the MCP connection decision sprint, then set `NEXT_PUBLIC_RELAY_PILOT_CHECKOUT_URL`. Only `https://buy.stripe.com` URLs are accepted. Without it, the public page and API show the price but fail closed, with no working purchase link.
 
 ## Compounding loop
 
