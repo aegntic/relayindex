@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/cover-16x9.jpg" alt="relayindex — Real-time MCP server status ledger, executability envelopes, and capability intelligence network (relayindex.dev)" width="100%" />
+</p>
+
 # Relay Index
 
 Relay Index is a production-shaped prototype for an agent capability intelligence network. It discovers capabilities, verifies claims, normalizes evidence, tracks observed outcomes, ranks expected utility and emits agent-consumable records.
